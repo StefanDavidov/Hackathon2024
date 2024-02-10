@@ -46,5 +46,7 @@ def model_train_and_evaluate(X_train, X_test, y_train, y_test):
         _, predicted = torch.max(y_pred, dim=1) 
         accuracy = (predicted == y_test).float().mean() 
         print(f'Test Accuracy: {accuracy.item():.4f}')
+    
+    torch.save(model, './trainedModel')
 
     return model
