@@ -1,2 +1,5 @@
 .env
 ./data/edited_data.csv
+model/trainedModel/arima_model.pkl
+data/edited_data.csv
+.

@@ -1,11 +1,4 @@
-import datetime
-import json
-import math
 import os
-import time
-
-# from tqdm import tqdm
-from pprint import pprint
 
 import numpy as np
 import pandas as pd
@@ -21,7 +14,7 @@ APPLICATION_ID = os.getenv("APPLICATION_ID")
 APPLICATION_KEY = os.getenv("APPLICATION_KEY")
 APPLICATION_USERNAME = os.getenv("APPLICATION_USERNAME")
 APPLICATION_PASSWORD = os.getenv("APPLICATION_PASSWORD")
-tickers = pd.read_csv("./data/sp500wiki.csv")
+tickers = pd.read_csv("../data/sp500wiki.csv")
 headers = {
     "X-AYLIEN-NewsAPI-Application-ID": APPLICATION_ID,
     "X-AYLIEN-NewsAPI-Application-Key": APPLICATION_KEY,
@@ -106,4 +99,4 @@ def get_api(symbol: str):
         return user_input
 
 
-print(get_api("AMZN"))
+
